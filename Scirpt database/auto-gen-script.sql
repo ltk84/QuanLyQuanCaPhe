@@ -1,12 +1,15 @@
 USE [master]
 GO
-/****** Object:  Database [QLCF]    Script Date: 29-Oct-21 8:15:15 PM ******/
+/****** Object:  Database [QLCF]    Script Date: 29-Oct-21 8:47:36 PM ******/
 CREATE DATABASE [QLCF]
 GO
- 
+
+USE [QLCF]
+GO
+
 CREATE FUNCTION [dbo].[fuConvertToUnsign1] ( @strInput NVARCHAR(4000) ) RETURNS NVARCHAR(4000) AS BEGIN IF @strInput IS NULL RETURN @strInput IF @strInput = '' RETURN @strInput DECLARE @RT NVARCHAR(4000) DECLARE @SIGN_CHARS NCHAR(136) DECLARE @UNSIGN_CHARS NCHAR (136) SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' DECLARE @COUNTER int DECLARE @COUNTER1 int SET @COUNTER = 1 WHILE (@COUNTER <=LEN(@strInput)) BEGIN SET @COUNTER1 = 1 WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) BREAK END SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END SET @strInput = replace(@strInput,' ','-') RETURN @strInput END
 GO
-/****** Object:  Table [dbo].[ACCOUNT]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  Table [dbo].[ACCOUNT]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,7 +25,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[BILL]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  Table [dbo].[BILL]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -41,7 +44,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[BILL_INFO]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  Table [dbo].[BILL_INFO]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -57,7 +60,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FOOD]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  Table [dbo].[FOOD]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -73,7 +76,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FOOD_CATE]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  Table [dbo].[FOOD_CATE]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -87,7 +90,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TABLES]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  Table [dbo].[TABLES]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,6 +104,168 @@ PRIMARY KEY CLUSTERED
 	[TABLES_ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[ACCOUNT] ON 
+GO
+INSERT [dbo].[ACCOUNT] ([ACC_ID], [USERNAME], [PASS], [ACC_TYPE]) VALUES (1, N'1', N'1962026656160185351301320480154111117132155', 0)
+GO
+INSERT [dbo].[ACCOUNT] ([ACC_ID], [USERNAME], [PASS], [ACC_TYPE]) VALUES (8, N'2', N'2003011414115776479911161271372042013444', 0)
+GO
+INSERT [dbo].[ACCOUNT] ([ACC_ID], [USERNAME], [PASS], [ACC_TYPE]) VALUES (9, N'3', N'23620320012675922262544048143217242167186243', 0)
+GO
+SET IDENTITY_INSERT [dbo].[ACCOUNT] OFF
+GO
+SET IDENTITY_INSERT [dbo].[BILL] ON 
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (78, 3, 1, CAST(N'2021-02-03' AS Date), CAST(N'2021-02-03' AS Date), 15, 17000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (85, 3, 1, CAST(N'2021-02-15' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (87, 4, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (88, 5, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (89, 6, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (90, 7, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (91, 8, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (92, 9, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (93, 10, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (94, 11, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (95, 3, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (96, 4, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (97, 5, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (98, 6, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (99, 7, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (100, 8, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (101, 9, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (102, 10, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (103, 11, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+INSERT [dbo].[BILL] ([BILL_ID], [TABLE_ID], [BILL_STATUS], [DATECHECKIN], [DATECHECKOUT], [discount], [totalPrice]) VALUES (104, 12, 1, CAST(N'2021-02-21' AS Date), CAST(N'2021-02-21' AS Date), 0, 10000)
+GO
+SET IDENTITY_INSERT [dbo].[BILL] OFF
+GO
+SET IDENTITY_INSERT [dbo].[BILL_INFO] ON 
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (139, 85, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (140, 87, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (141, 88, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (142, 89, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (143, 90, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (144, 91, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (145, 92, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (146, 93, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (147, 94, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (148, 95, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (149, 96, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (150, 97, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (151, 98, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (152, 99, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (153, 100, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (154, 101, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (155, 102, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (156, 103, 35, 1)
+GO
+INSERT [dbo].[BILL_INFO] ([ID], [BILL_ID], [FOOD_ID], [COUNT]) VALUES (157, 104, 35, 1)
+GO
+SET IDENTITY_INSERT [dbo].[BILL_INFO] OFF
+GO
+SET IDENTITY_INSERT [dbo].[FOOD] ON 
+GO
+INSERT [dbo].[FOOD] ([FOOD_ID], [FOOD_NAME], [FCATE_ID], [PRICE]) VALUES (4, N'Cà phê sữa đá', 2, 15000.0000)
+GO
+INSERT [dbo].[FOOD] ([FOOD_ID], [FOOD_NAME], [FCATE_ID], [PRICE]) VALUES (5, N'Bạc xỉu', 2, 15000.0000)
+GO
+INSERT [dbo].[FOOD] ([FOOD_ID], [FOOD_NAME], [FCATE_ID], [PRICE]) VALUES (28, N'Rau câu', 11, 5000.0000)
+GO
+INSERT [dbo].[FOOD] ([FOOD_ID], [FOOD_NAME], [FCATE_ID], [PRICE]) VALUES (35, N'Cơm chiên cá mặn', 1, 10000.0000)
+GO
+INSERT [dbo].[FOOD] ([FOOD_ID], [FOOD_NAME], [FCATE_ID], [PRICE]) VALUES (36, N'Cơm gà chiên', 1, 10000.0000)
+GO
+INSERT [dbo].[FOOD] ([FOOD_ID], [FOOD_NAME], [FCATE_ID], [PRICE]) VALUES (40, N'Bánh flan', 11, 5000.0000)
+GO
+SET IDENTITY_INSERT [dbo].[FOOD] OFF
+GO
+SET IDENTITY_INSERT [dbo].[FOOD_CATE] ON 
+GO
+INSERT [dbo].[FOOD_CATE] ([FCATE_ID], [FCATE_NAME]) VALUES (1, N'Đồ ăn')
+GO
+INSERT [dbo].[FOOD_CATE] ([FCATE_ID], [FCATE_NAME]) VALUES (2, N'Nước uống')
+GO
+INSERT [dbo].[FOOD_CATE] ([FCATE_ID], [FCATE_NAME]) VALUES (11, N'Tráng miệng')
+GO
+SET IDENTITY_INSERT [dbo].[FOOD_CATE] OFF
+GO
+SET IDENTITY_INSERT [dbo].[TABLES] ON 
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (3, 0, N'Bàn 2')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (4, 0, N'Bàn 4')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (5, 0, N'Bàn 5')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (6, 0, N'Bàn 6')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (7, 0, N'Bàn 7')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (8, 0, N'Bàn 8')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (9, 0, N'Bàn 9')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (10, 0, N'Bàn 10')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (11, 0, N'Bàn 11')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (12, 0, N'Bàn 12')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (13, 0, N'Bàn 13')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (14, 0, N'Bàn 14')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (15, 0, N'Bàn 15')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (16, 0, N'Bàn 16')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (17, 0, N'Bàn 17')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (19, 0, N'Bàn 19')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (36, 0, N'Bàn 1')
+GO
+INSERT [dbo].[TABLES] ([TABLES_ID], [TABLES_STATUS], [name]) VALUES (37, 0, N'Bàn 123')
+GO
+SET IDENTITY_INSERT [dbo].[TABLES] OFF
 GO
 ALTER TABLE [dbo].[ACCOUNT] ADD  DEFAULT (N'USER') FOR [USERNAME]
 GO
@@ -134,7 +299,7 @@ GO
 ALTER TABLE [dbo].[FOOD]  WITH CHECK ADD FOREIGN KEY([FCATE_ID])
 REFERENCES [dbo].[FOOD_CATE] ([FCATE_ID])
 GO
-/****** Object:  StoredProcedure [dbo].[USP_DeleteTableByID]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_DeleteTableByID]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -161,7 +326,7 @@ BEGIN
 	WHERE @idTable = TABLES_ID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[USP_GETACCOUNTBYUSERNAME]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_GETACCOUNTBYUSERNAME]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -174,7 +339,7 @@ END
 
 EXEC USP_GETACCOUNTBYUSERNAME @USERNAME = N'TUNGLETE'
 GO
-/****** Object:  StoredProcedure [dbo].[USP_GetBillListByDate]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_GetBillListByDate]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -188,7 +353,7 @@ FROM dbo.BILL b, dbo.TABLES t
 WHERE b.TABLE_ID = t.TABLES_ID AND b.DATECHECKIN >= @DateIn AND b.DATECHECKOUT <= @DateOut 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[USP_GetBillListByDateAndPage]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_GetBillListByDateAndPage]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -221,7 +386,7 @@ BEGIN
 
 END 
 GO
-/****** Object:  StoredProcedure [dbo].[USP_GetTableList]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_GetTableList]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -229,7 +394,7 @@ GO
 CREATE PROC [dbo].[USP_GetTableList]
 AS SELECT * FROM dbo.TABLES
 GO
-/****** Object:  StoredProcedure [dbo].[USP_InsertBill]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_InsertBill]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -255,7 +420,7 @@ BEGIN
 		)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[USP_InsertBillInfo]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_InsertBillInfo]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -300,7 +465,7 @@ BEGIN
 	END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[USP_LOGIN]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_LOGIN]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -312,7 +477,7 @@ BEGIN
 	SELECT * FROM ACCOUNT WHERE USERNAME = @USERNAME  AND PASS = @PASS
 END
 GO
-/****** Object:  StoredProcedure [dbo].[USP_SwitchTable]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_SwitchTable]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -404,7 +569,7 @@ ALTER TABLE dbo.TABLES
 ADD name NVARCHAR(100)
 
 GO
-/****** Object:  StoredProcedure [dbo].[USP_UpdateAccount]    Script Date: 29-Oct-21 8:15:16 PM ******/
+/****** Object:  StoredProcedure [dbo].[USP_UpdateAccount]    Script Date: 29-Oct-21 8:47:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
