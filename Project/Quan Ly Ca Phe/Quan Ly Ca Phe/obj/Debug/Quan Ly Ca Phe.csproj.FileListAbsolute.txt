@@ -1,0 +1,13 @@
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csprojAssemblyReference.cache
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.Properties.Resources.resources
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.GenerateResource.cache
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.TableManagerForm.resources
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
+D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
