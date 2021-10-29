@@ -54,7 +54,7 @@ namespace Quan_Ly_Ca_Phe
             List<Food> foodList = FoodDAO.Instance.GetFoodListByCateID(idCate);
 
             cbFood.DataSource = foodList;
-            
+
             cbFood.DisplayMember = "name";
         }
 
@@ -99,7 +99,7 @@ namespace Quan_Ly_Ca_Phe
             foreach (DTO.Menu item in menus)
             {
                 ListViewItem lvItem = new ListViewItem(item.FoodName);
-                lvItem.SubItems.Add(item.Count.ToString()); 
+                lvItem.SubItems.Add(item.Count.ToString());
                 lvItem.SubItems.Add(item.Price.ToString());
                 lvItem.SubItems.Add(item.TotalPrice.ToString());
 
@@ -143,7 +143,7 @@ namespace Quan_Ly_Ca_Phe
 
         private void Apf_AfterUpdateAccount(object sender, AccountEvent e)
         {
-            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.UserName + ")"; 
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.UserName + ")";
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -235,7 +235,11 @@ namespace Quan_Ly_Ca_Phe
             if (idCate > 0)
                 LoadFoodByCateID(idCate);
         }
-
+        private void  btnAddDish_Click(object sender, EventArgs e)
+        {
+            AddDish ad = new AddDish();
+            ad.ShowDialog();
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Table t = lvBill.Tag as Table;
@@ -309,8 +313,17 @@ namespace Quan_Ly_Ca_Phe
             LoadTableList();
         }
 
+
         #endregion
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txtTotalPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
