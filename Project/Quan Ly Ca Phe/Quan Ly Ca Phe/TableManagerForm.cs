@@ -16,6 +16,7 @@ namespace Quan_Ly_Ca_Phe
     public partial class TableManagerForm : Form
     {
         private Account loginAccount;
+        public float totalPrice  = 0;
 
         public Account LoginAccount { get => loginAccount; set { loginAccount = value; ChangeAccount(loginAccount.Type); } }
 
@@ -141,11 +142,36 @@ namespace Quan_Ly_Ca_Phe
         {
             LoadTableList();
         }
-       
-        private void  btnAddDish_Click(object sender, EventArgs e)
+
+        private void btnAddDish_Click(object sender, EventArgs e)
         {
-            AddDish ad = new AddDish();
+            Table t = lvBill.Tag as Table;
+            if (t == null)
+                return;
+            int idTable = t.ID;
+            int idBill = BillDAO.Instance.GetBillIDByIDTable(idTable);
+            String nameTable = t.Name;
+            AddDish ad = new AddDish(id: idTable, name: nameTable);
             ad.ShowDialog();
+            int idFood = ad.idFood;
+            int count = ad.count;
+            if (idBill == -1)
+            {
+                BillDAO.Instance.InsertBill(idTable);
+                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxBillID(), idFood, count);
+            }
+            else
+            {
+                BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+            }
+            ShowBill(idTable);
+            LoadTableList();
+            CultureInfo culture = new CultureInfo("vi-VN");
+            totalPrice += ad.totalPrice;
+            txtTotalPrice.Text = this.totalPrice.ToString("c", culture);
+            if (lvBill.Tag != null)
+                ShowBill((lvBill.Tag as Table).ID);
+            ad.Close();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -215,6 +241,15 @@ namespace Quan_Ly_Ca_Phe
         private void lvBill_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdminForm af = new AdminForm();
+            af.loginAccount = loginAccount;
+
+
+            af.ShowDialog();
         }
     }
 }

@@ -17,8 +17,11 @@ namespace Quan_Ly_Ca_Phe
     {
         private Account loginAccount;
         public ListViewItem lvItem = new ListViewItem();
-        public float totalPrice = 0; 
-
+        public int idFood;
+        public String nameTable;
+        public int count;
+        public float totalPrice = 0;
+        public int tableId;
         public Account LoginAccount { get => loginAccount; set { loginAccount = value;  } }
         private void ShowBill(int idTable)
         {
@@ -34,10 +37,13 @@ namespace Quan_Ly_Ca_Phe
             }
         }
        
-        public AddDish()
+        public AddDish(int id, String name)
         {
+
             InitializeComponent();
             LoadCatergory();
+            tableId = id;            
+            this.label2.Text = name;
         }
         private void LoadCatergory()
         {
@@ -55,53 +61,6 @@ namespace Quan_Ly_Ca_Phe
             cbFood.DataSource = foodList;
 
             cbFood.DisplayMember = "name";
-        }
-        private void Af_UpdateCatergory(object sender, EventArgs e)
-        {
-            LoadCatergory();
-        }
-
-        private void Af_DeleteCatergory(object sender, EventArgs e)
-        {
-            LoadCatergory();
-        }
-
-        private void Af_InsertCatergory(object sender, EventArgs e)
-        {
-            LoadCatergory();
-        }
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AdminForm af = new AdminForm();
-            af.loginAccount = loginAccount;
-
-            af.InsertFood += Af_InsertFood;
-            af.DeleteFood += Af_DeleteFood;
-            af.UpdateFood += Af_UpdateFood;
-
-            af.InsertTable += Af_InsertTable;
-            af.DeleteTable += Af_DeleteTable;
-            af.UpdateTable += Af_UpdateTable;
-
-            af.InsertCatergory += Af_InsertCatergory;
-            af.DeleteCatergory += Af_DeleteCatergory;
-            af.UpdateCatergory += Af_UpdateCatergory;
-
-            af.ShowDialog();
-        }
-        private void Af_UpdateTable(object sender, EventArgs e)
-        {
-            LoadTableList();
-        }
-
-        private void Af_DeleteTable(object sender, EventArgs e)
-        {
-            LoadTableList();
-        }
-
-        private void Af_InsertTable(object sender, EventArgs e)
-        {
-            LoadTableList();
         }
         private void cbCater_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -186,6 +145,27 @@ namespace Quan_Ly_Ca_Phe
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbCater_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            Catergory cater = cb.SelectedItem as Catergory;
+
+            int idCate = cater.IdCate;
+            if (idCate > 0)
+                LoadFoodByCateID(idCate);
+        }
+
+        private void vbButton21_Click(object sender, EventArgs e)
+        {
+            idFood = (cbFood.SelectedItem as Food).ID;
+            count = (int)nudAddFood.Value;
+            this.Hide();
         }
     }
 }
