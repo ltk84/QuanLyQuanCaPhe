@@ -54,12 +54,16 @@ namespace Quan_Ly_Ca_Phe
                 switch (item.Status)
                 {
                     case 0:
-                        btn.Text = btn.Text + "Trống";
-                        btn.BackColor = Color.White;
+                        btn.Text = btn.Text;
+                        btn.BackColor = ColorTranslator.FromHtml("#6BFF5F");
+                        btn.Image = Properties.Resources.enable;
+                        btn.ImageAlign = ContentAlignment.BottomCenter;
                         break;
                     default:
-                        btn.Text = btn.Text + "Đã có khách";
-                        btn.BackColor = Color.Blue;
+                        btn.Text = btn.Text;
+                        btn.BackColor = ColorTranslator.FromHtml("#807B7B");
+                        btn.Image = Properties.Resources.disnable;
+                        btn.ImageAlign = ContentAlignment.BottomCenter;
                         break;
                 }
 

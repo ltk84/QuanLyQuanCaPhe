@@ -67,8 +67,8 @@ namespace Quan_Ly_Ca_Phe
             this.thôngTinTàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(760, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 10, 0, 0);
+            this.menuStrip1.Size = new System.Drawing.Size(760, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -127,9 +127,9 @@ namespace Quan_Ly_Ca_Phe
             this.panel2.Controls.Add(this.labelNameTable);
             this.panel2.Controls.Add(this.btnCheckOut);
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Location = new System.Drawing.Point(384, 28);
+            this.panel2.Location = new System.Drawing.Point(384, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(361, 54);
+            this.panel2.Size = new System.Drawing.Size(361, 57);
             this.panel2.TabIndex = 2;
             // 
             // labelTotal
@@ -170,7 +170,7 @@ namespace Quan_Ly_Ca_Phe
             this.btnCheckOut.FlatAppearance.BorderSize = 0;
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(268, 18);
+            this.btnCheckOut.Location = new System.Drawing.Point(266, 8);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(93, 26);
@@ -190,7 +190,7 @@ namespace Quan_Ly_Ca_Phe
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(159, 18);
+            this.btnAdd.Location = new System.Drawing.Point(160, 8);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(93, 26);
@@ -205,7 +205,7 @@ namespace Quan_Ly_Ca_Phe
             this.panel3.Controls.Add(this.lvBill);
             this.panel3.Location = new System.Drawing.Point(384, 85);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(361, 271);
+            this.panel3.Size = new System.Drawing.Size(374, 286);
             this.panel3.TabIndex = 3;
             // 
             // lvBill
@@ -219,7 +219,7 @@ namespace Quan_Ly_Ca_Phe
             this.lvBill.HideSelection = false;
             this.lvBill.Location = new System.Drawing.Point(0, 0);
             this.lvBill.Name = "lvBill";
-            this.lvBill.Size = new System.Drawing.Size(361, 271);
+            this.lvBill.Size = new System.Drawing.Size(374, 286);
             this.lvBill.TabIndex = 0;
             this.lvBill.UseCompatibleStateImageBehavior = false;
             this.lvBill.View = System.Windows.Forms.View.Details;
@@ -297,11 +297,11 @@ namespace Quan_Ly_Ca_Phe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 420);
             this.ControlBox = false;
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TableManagerForm";
