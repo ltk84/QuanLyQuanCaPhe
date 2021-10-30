@@ -90,6 +90,8 @@ namespace Quan_Ly_Ca_Phe
 
             CultureInfo culture = new CultureInfo("vi-VN");
             txtTotalPrice.Text = totalPrice.ToString("c", culture);
+            Table t = lvBill.Tag as Table;
+            labelNameTable.Text = t.Name;
         }
 
         private void LoadComboBoxSwitchTable()
@@ -173,36 +175,23 @@ namespace Quan_Ly_Ca_Phe
                 ShowBill((lvBill.Tag as Table).ID);
             ad.Close();
         }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table table = lvBill.Tag as Table;
-
             if (table == null)
                 return;
-
             int idBill = BillDAO.Instance.GetBillIDByIDTable(table.ID);
-            int discount = (int)nudDiscount.Value;
-
             double totalPrice = Decimal.ToDouble(Convert.ToDecimal(txtTotalPrice.Text.Split(',')[0])) * 1000;
-            double finalTotalPrice = totalPrice - totalPrice / 100 * discount;
-
-            if (idBill != -1)
+            CheckOut ck = new CheckOut(id: idBill, total: totalPrice, tbID: table.ID);
+            ck.ShowDialog();
+            if (ck.isCheckOut == true)
             {
-                if (MessageBox.Show(string.Format("Thanh toán hóa đơn bàn {0}\n Tổng tiền - (Tổng tiền / 100) x Giảm giá \n => {1} - ({1} / 100) x {2} = {3}", table.ID.ToString(), totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    BillDAO.Instance.CheckOutBill(idBill, discount, (float)finalTotalPrice);
-                    lvBill.Items.Clear();
-                }
+                lvBill.Items.Clear();
+                this.txtTotalPrice.Text = "0.00";
             }
-
+            ck.Close();
             LoadTableList();
         }
-
         private void btnDiscount_Click(object sender, EventArgs e)
         {
 

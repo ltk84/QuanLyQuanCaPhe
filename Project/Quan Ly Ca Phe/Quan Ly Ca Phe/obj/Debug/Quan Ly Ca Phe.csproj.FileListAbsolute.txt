@@ -25,3 +25,4 @@ F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly C
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
+F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.CheckOut.resources
