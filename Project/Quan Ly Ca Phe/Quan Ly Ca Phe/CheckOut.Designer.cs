@@ -38,12 +38,14 @@
             this.btnCheckOut = new CustomButton.VBButton2();
             this.btnCancel = new CustomButton.VBButton2();
             this.vbButton21 = new CustomButton.VBButton2();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(147, 11);
@@ -55,6 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(195, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
@@ -82,6 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(94, 78);
             this.label3.Name = "label3";
@@ -92,6 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(94, 106);
             this.label4.Name = "label4";
@@ -102,6 +107,7 @@
             // labelCost
             // 
             this.labelCost.AutoSize = true;
+            this.labelCost.BackColor = System.Drawing.Color.White;
             this.labelCost.Location = new System.Drawing.Point(246, 133);
             this.labelCost.Name = "labelCost";
             this.labelCost.Size = new System.Drawing.Size(28, 13);
@@ -170,10 +176,19 @@
             this.vbButton21.UseVisualStyleBackColor = false;
             this.vbButton21.Click += new System.EventHandler(this.vbButton21_Click_1);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(440, 209);
+            this.panel1.TabIndex = 17;
+            // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(442, 211);
             this.Controls.Add(this.vbButton21);
             this.Controls.Add(this.btnCheckOut);
@@ -185,6 +200,7 @@
             this.Controls.Add(this.txtTotalPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckOut";
             this.Text = "CheckOut";
@@ -206,5 +222,6 @@
         private CustomButton.VBButton2 btnCancel;
         private CustomButton.VBButton2 btnCheckOut;
         private CustomButton.VBButton2 vbButton21;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -161,13 +161,13 @@ namespace Quan_Ly_Ca_Phe
             ad.ShowDialog();
             int idFood = ad.idFood;
             int count = ad.count;
-            if (idBill == -1)
+            if (idBill == -1 && count != 0)
             {
                 BillDAO.Instance.InsertBill(idTable);
                 BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxBillID(), idFood, count);
                 TableDAO.Instance.UpdateStatus(1,idTable);
             }
-            else
+            else if(count != 0)
             {
                 BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
                 TableDAO.Instance.UpdateStatus(1, idTable);
@@ -184,7 +184,7 @@ namespace Quan_Ly_Ca_Phe
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table table = lvBill.Tag as Table;
-            if (table == null)
+            if (table == null || table.Status == 0)
                 return;
             int idBill = BillDAO.Instance.GetBillIDByIDTable(table.ID);
             double totalPrice = Decimal.ToDouble(Convert.ToDecimal(labelTotal.Text.Split(',')[0])) * 1000;

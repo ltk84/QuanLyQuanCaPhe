@@ -19,7 +19,7 @@ namespace Quan_Ly_Ca_Phe
         public ListViewItem lvItem = new ListViewItem();
         public int idFood;
         public String nameTable;
-        public int count;
+        public int count = 0;
         public float totalPrice = 0;
         public int tableId;
         public Account LoginAccount { get => loginAccount; set { loginAccount = value;  } }
