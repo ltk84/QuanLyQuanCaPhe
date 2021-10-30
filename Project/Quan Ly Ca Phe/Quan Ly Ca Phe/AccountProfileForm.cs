@@ -30,12 +30,12 @@ namespace Quan_Ly_Ca_Phe
 
         private void ChangeAccount(Account acc)
         {
-            this.txtSignIn.Text = acc.UserName;
+            this.labelName.Text = acc.UserName;
         }
 
         private void UpdateAccount()
         {
-            string userName = txtSignIn.Text;
+            string userName = labelName.Text;
             string passWord = txtPassword.Text;
             string newPass = txtNewPass.Text;
             string rePass = txtRePass.Text;
