@@ -16,28 +16,22 @@ namespace Quan_Ly_Ca_Phe
     public partial class AddDish : Form
     {
         private Account loginAccount;
+        public ListViewItem lvItem = new ListViewItem();
+        public float totalPrice = 0; 
 
         public Account LoginAccount { get => loginAccount; set { loginAccount = value;  } }
         private void ShowBill(int idTable)
         {
-            lvBill.Items.Clear();
-
+            
             List<DTO.Menu> menus = MenuDAO.Instance.GetBillInfoByTableID(idTable);
-
-            float totalPrice = 0;
             foreach (DTO.Menu item in menus)
             {
-                ListViewItem lvItem = new ListViewItem(item.FoodName);
+                lvItem = new ListViewItem(item.FoodName);
                 lvItem.SubItems.Add(item.Count.ToString());
                 lvItem.SubItems.Add(item.Price.ToString());
                 lvItem.SubItems.Add(item.TotalPrice.ToString());
-
                 totalPrice += item.TotalPrice;
-                lvBill.Items.Add(lvItem);
             }
-
-            CultureInfo culture = new CultureInfo("vi-VN");
-            //txtTotalPrice.Text = totalPrice.ToString("c", culture);
         }
        
         public AddDish()
@@ -65,15 +59,11 @@ namespace Quan_Ly_Ca_Phe
         private void Af_UpdateCatergory(object sender, EventArgs e)
         {
             LoadCatergory();
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
         }
 
         private void Af_DeleteCatergory(object sender, EventArgs e)
         {
             LoadCatergory();
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
         }
 
         private void Af_InsertCatergory(object sender, EventArgs e)
@@ -159,29 +149,43 @@ namespace Quan_Ly_Ca_Phe
         private void Btn_Click(object sender, EventArgs e)
         {
             int idTable = (int)((sender as Button).Tag as Table).ID;
-            lvBill.Tag = (sender as Button).Tag;
-            ShowBill(idTable);
+            
         }
         private void Af_UpdateFood(object sender, EventArgs e)
         {
             LoadFoodByCateID((cbCater.SelectedItem as Catergory).IdCate);
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
         }
 
         private void Af_DeleteFood(object sender, EventArgs e)
         {
             LoadFoodByCateID((cbCater.SelectedItem as Catergory).IdCate);
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
             LoadTableList();
         }
 
         private void Af_InsertFood(object sender, EventArgs e)
         {
             LoadFoodByCateID((cbCater.SelectedItem as Catergory).IdCate);
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
+           
+        }
+
+        private void cbFood_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
