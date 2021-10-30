@@ -565,8 +565,37 @@ namespace Quan_Ly_Ca_Phe
         }
 
 
+
         #endregion
 
+        private void cbCateFood_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txtNameFood_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
