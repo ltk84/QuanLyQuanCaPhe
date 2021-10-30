@@ -89,7 +89,7 @@ namespace Quan_Ly_Ca_Phe
             }
 
             CultureInfo culture = new CultureInfo("vi-VN");
-            txtTotalPrice.Text = totalPrice.ToString("c", culture);
+            labelTotal.Text = totalPrice.ToString("c", culture);
             Table t = lvBill.Tag as Table;
             labelNameTable.Text = t.Name;
         }
@@ -161,16 +161,18 @@ namespace Quan_Ly_Ca_Phe
             {
                 BillDAO.Instance.InsertBill(idTable);
                 BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxBillID(), idFood, count);
+                TableDAO.Instance.UpdateStatus(1,idTable);
             }
             else
             {
                 BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+                TableDAO.Instance.UpdateStatus(1, idTable);
             }
             ShowBill(idTable);
             LoadTableList();
             CultureInfo culture = new CultureInfo("vi-VN");
             totalPrice += ad.totalPrice;
-            txtTotalPrice.Text = this.totalPrice.ToString("c", culture);
+            labelTotal.Text = this.totalPrice.ToString("c", culture);
             if (lvBill.Tag != null)
                 ShowBill((lvBill.Tag as Table).ID);
             ad.Close();
@@ -181,22 +183,18 @@ namespace Quan_Ly_Ca_Phe
             if (table == null)
                 return;
             int idBill = BillDAO.Instance.GetBillIDByIDTable(table.ID);
-            double totalPrice = Decimal.ToDouble(Convert.ToDecimal(txtTotalPrice.Text.Split(',')[0])) * 1000;
+            double totalPrice = Decimal.ToDouble(Convert.ToDecimal(labelTotal.Text.Split(',')[0])) * 1000;
             CheckOut ck = new CheckOut(id: idBill, total: totalPrice, tbID: table.ID);
             ck.ShowDialog();
             if (ck.isCheckOut == true)
             {
                 lvBill.Items.Clear();
-                this.txtTotalPrice.Text = "0.00";
+                this.labelTotal.Text = "0.00";
+                TableDAO.Instance.UpdateStatus(0, table.ID);
             }
             ck.Close();
             LoadTableList();
         }
-        private void btnDiscount_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSwitchTable_Click(object sender, EventArgs e)
         {
             int idOld, idNew;
@@ -217,28 +215,18 @@ namespace Quan_Ly_Ca_Phe
 
         #endregion
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTotalPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lvBill_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AdminForm af = new AdminForm();
             af.loginAccount = loginAccount;
-
-
             af.ShowDialog();
+            LoadTableList();
+        }
+
+        private void cbSwitchTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

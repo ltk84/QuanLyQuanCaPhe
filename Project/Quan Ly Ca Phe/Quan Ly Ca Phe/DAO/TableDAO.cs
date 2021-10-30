@@ -16,8 +16,8 @@ namespace Quan_Ly_Ca_Phe.DAO
 
         private TableDAO() { }
 
-        public static int Height = 100;
-        public static int Weight = 100;
+        public static int Height = 80;
+        public static int Weight = 80;
 
         public List<Table> LoadTableList()
         {
@@ -42,7 +42,13 @@ namespace Quan_Ly_Ca_Phe.DAO
 
             return data;
         }
-        
+
+        public void UpdateStatus(int status, int idTable)
+        {
+            string query  = String.Format("UPDATE dbo.TABLES SET TABLES_STATUS = {0} WHERE TABLES_ID = {1} ", status, idTable); 
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+
         public void SwitchTable(int idOld, int idNew)
         {
             string query = "EXEC USP_SwitchTable @idOld , @idNew";
