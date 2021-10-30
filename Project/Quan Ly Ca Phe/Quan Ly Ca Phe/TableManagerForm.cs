@@ -27,8 +27,6 @@ namespace Quan_Ly_Ca_Phe
 
             LoadTableList();
 
-            LoadCatergory();
-
             LoadComboBoxSwitchTable();
         }
 
@@ -38,24 +36,6 @@ namespace Quan_Ly_Ca_Phe
         {
             adminToolStripMenuItem.Enabled = type == 0;
             thôngTinTàiKhoảnToolStripMenuItem.Text += String.Format(" ({0})", loginAccount.UserName);
-        }
-
-        private void LoadCatergory()
-        {
-            List<Catergory> list = CatergoryDAO.Instance.LoadCatergory();
-
-            cbCater.DataSource = list;
-
-            cbCater.DisplayMember = "nameFood";
-        }
-
-        private void LoadFoodByCateID(int idCate)
-        {
-            List<Food> foodList = FoodDAO.Instance.GetFoodListByCateID(idCate);
-
-            cbFood.DataSource = foodList;
-
-            cbFood.DisplayMember = "name";
         }
 
         private void LoadTableList()
@@ -146,45 +126,7 @@ namespace Quan_Ly_Ca_Phe
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.UserName + ")";
         }
 
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AdminForm af = new AdminForm();
-            af.loginAccount = loginAccount;
-
-            af.InsertFood += Af_InsertFood;
-            af.DeleteFood += Af_DeleteFood;
-            af.UpdateFood += Af_UpdateFood;
-
-            af.InsertTable += Af_InsertTable;
-            af.DeleteTable += Af_DeleteTable;
-            af.UpdateTable += Af_UpdateTable;
-
-            af.InsertCatergory += Af_InsertCatergory;
-            af.DeleteCatergory += Af_DeleteCatergory;
-            af.UpdateCatergory += Af_UpdateCatergory;
-
-            af.ShowDialog();
-        }
-
-        private void Af_UpdateCatergory(object sender, EventArgs e)
-        {
-            LoadCatergory();
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
-        }
-
-        private void Af_DeleteCatergory(object sender, EventArgs e)
-        {
-            LoadCatergory();
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
-        }
-
-        private void Af_InsertCatergory(object sender, EventArgs e)
-        {
-            LoadCatergory();
-        }
-
+       
         private void Af_UpdateTable(object sender, EventArgs e)
         {
             LoadTableList();
@@ -199,42 +141,7 @@ namespace Quan_Ly_Ca_Phe
         {
             LoadTableList();
         }
-
-        private void Af_UpdateFood(object sender, EventArgs e)
-        {
-            LoadFoodByCateID((cbCater.SelectedItem as Catergory).IdCate);
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
-        }
-
-        private void Af_DeleteFood(object sender, EventArgs e)
-        {
-            LoadFoodByCateID((cbCater.SelectedItem as Catergory).IdCate);
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
-            LoadTableList();
-        }
-
-        private void Af_InsertFood(object sender, EventArgs e)
-        {
-            LoadFoodByCateID((cbCater.SelectedItem as Catergory).IdCate);
-            if (lvBill.Tag != null)
-                ShowBill((lvBill.Tag as Table).ID);
-        }
-
-        private void cbCater_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox cb = sender as ComboBox;
-
-            if (cb.SelectedItem == null)
-                return;
-
-            Catergory cater = cb.SelectedItem as Catergory;
-
-            int idCate = cater.IdCate;
-            if (idCate > 0)
-                LoadFoodByCateID(idCate);
-        }
+       
         private void  btnAddDish_Click(object sender, EventArgs e)
         {
             AddDish ad = new AddDish();
@@ -242,28 +149,7 @@ namespace Quan_Ly_Ca_Phe
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Table t = lvBill.Tag as Table;
-            if (t == null)
-                return;
 
-            int idTable = t.ID;
-            int idBill = BillDAO.Instance.GetBillIDByIDTable(idTable);
-            int idFood = (cbFood.SelectedItem as Food).ID;
-            int count = (int)nudAddFood.Value;
-
-            if (idBill == -1)
-            {
-                BillDAO.Instance.InsertBill(idTable);
-                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxBillID(), idFood, count);
-            }
-            else
-            {
-                BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
-            }
-
-            ShowBill(idTable);
-
-            LoadTableList();
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -322,6 +208,11 @@ namespace Quan_Ly_Ca_Phe
         }
 
         private void txtTotalPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvBill_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
