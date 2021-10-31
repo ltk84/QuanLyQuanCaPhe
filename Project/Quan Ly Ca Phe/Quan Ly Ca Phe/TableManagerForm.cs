@@ -58,12 +58,16 @@ namespace Quan_Ly_Ca_Phe
                         btn.BackColor = ColorTranslator.FromHtml("#6BFF5F");
                         btn.Image = Properties.Resources.enable;
                         btn.ImageAlign = ContentAlignment.BottomCenter;
+                        btn.ForeColor = ColorTranslator.FromHtml("#000000");
+                        btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
                         break;
                     default:
                         btn.Text = btn.Text;
                         btn.BackColor = ColorTranslator.FromHtml("#807B7B");
                         btn.Image = Properties.Resources.disnable;
                         btn.ImageAlign = ContentAlignment.BottomCenter;
+                        btn.ForeColor = ColorTranslator.FromHtml("#B1B1B1");
+                        btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
                         break;
                 }
 

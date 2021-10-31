@@ -97,25 +97,29 @@ namespace Quan_Ly_Ca_Phe
             this.panel25 = new System.Windows.Forms.Panel();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.tpAccount = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
-            this.btnAddAcc = new System.Windows.Forms.Button();
-            this.btnEditAcc = new System.Windows.Forms.Button();
-            this.btnDelAcc = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.panel29 = new System.Windows.Forms.Panel();
             this.txtAccountType = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
             this.txtPassAcc = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtUsernameAcc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEditAcc = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtIDAcc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnAddAcc = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvAcc = new System.Windows.Forms.DataGridView();
+            this.btnDelAcc = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.tcAdmin.SuspendLayout();
             this.tbBill.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -149,6 +153,10 @@ namespace Quan_Ly_Ca_Phe
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcAdmin
@@ -203,7 +211,8 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnLast
             // 
-            this.btnLast.BackColor = System.Drawing.Color.Red;
+            this.btnLast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
+            this.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLast.ForeColor = System.Drawing.Color.White;
             this.btnLast.Location = new System.Drawing.Point(677, 315);
@@ -216,29 +225,34 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnNext
             // 
+            this.btnNext.BackColor = System.Drawing.Color.Silver;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(575, 315);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(96, 30);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Trang tiếp";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrevious
             // 
+            this.btnPrevious.BackColor = System.Drawing.Color.Silver;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.Location = new System.Drawing.Point(107, 315);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(96, 30);
             this.btnPrevious.TabIndex = 2;
             this.btnPrevious.Text = "Trang trước";
-            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.UseVisualStyleBackColor = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnFirst
             // 
-            this.btnFirst.BackColor = System.Drawing.Color.Red;
+            this.btnFirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
+            this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.ForeColor = System.Drawing.Color.White;
             this.btnFirst.Location = new System.Drawing.Point(5, 315);
@@ -277,6 +291,7 @@ namespace Quan_Ly_Ca_Phe
             // btnStatistic
             // 
             this.btnStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistic.ForeColor = System.Drawing.Color.White;
             this.btnStatistic.Location = new System.Drawing.Point(666, 7);
@@ -391,6 +406,7 @@ namespace Quan_Ly_Ca_Phe
             // btnSearchFood
             // 
             this.btnSearchFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
+            this.btnSearchFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchFood.ForeColor = System.Drawing.Color.White;
             this.btnSearchFood.Location = new System.Drawing.Point(194, 3);
@@ -403,13 +419,13 @@ namespace Quan_Ly_Ca_Phe
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.panel1);
             this.panel12.Controls.Add(this.label16);
             this.panel12.Controls.Add(this.btnAddFood);
             this.panel12.Controls.Add(this.label5);
             this.panel12.Controls.Add(this.txtIdFood);
             this.panel12.Controls.Add(this.label6);
             this.panel12.Controls.Add(this.txtNameFood);
-            this.panel12.Controls.Add(this.btnEditFood);
             this.panel12.Controls.Add(this.label7);
             this.panel12.Controls.Add(this.btnDeleteFood);
             this.panel12.Controls.Add(this.cbCateFood);
@@ -434,8 +450,9 @@ namespace Quan_Ly_Ca_Phe
             // btnAddFood
             // 
             this.btnAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.ForeColor = System.Drawing.Color.Black;
+            this.btnAddFood.ForeColor = System.Drawing.Color.White;
             this.btnAddFood.Location = new System.Drawing.Point(80, 210);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(133, 40);
@@ -486,11 +503,12 @@ namespace Quan_Ly_Ca_Phe
             // btnEditFood
             // 
             this.btnEditFood.BackColor = System.Drawing.Color.Yellow;
+            this.btnEditFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditFood.ForeColor = System.Drawing.Color.Black;
-            this.btnEditFood.Location = new System.Drawing.Point(80, 256);
+            this.btnEditFood.Location = new System.Drawing.Point(-2, -2);
             this.btnEditFood.Name = "btnEditFood";
-            this.btnEditFood.Size = new System.Drawing.Size(133, 40);
+            this.btnEditFood.Size = new System.Drawing.Size(137, 44);
             this.btnEditFood.TabIndex = 1;
             this.btnEditFood.Text = "Sửa";
             this.btnEditFood.UseVisualStyleBackColor = false;
@@ -509,9 +527,10 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnDeleteFood
             // 
-            this.btnDeleteFood.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteFood.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteFood.ForeColor = System.Drawing.Color.White;
             this.btnDeleteFood.Location = new System.Drawing.Point(80, 302);
             this.btnDeleteFood.Name = "btnDeleteFood";
             this.btnDeleteFood.Size = new System.Drawing.Size(133, 40);
@@ -566,8 +585,8 @@ namespace Quan_Ly_Ca_Phe
             // 
             // panel17
             // 
+            this.panel17.Controls.Add(this.panel9);
             this.panel17.Controls.Add(this.label17);
-            this.panel17.Controls.Add(this.btnEditCate);
             this.panel17.Controls.Add(this.btnDeleteCate);
             this.panel17.Controls.Add(this.btnAddCate);
             this.panel17.Controls.Add(this.panel20);
@@ -591,11 +610,12 @@ namespace Quan_Ly_Ca_Phe
             // btnEditCate
             // 
             this.btnEditCate.BackColor = System.Drawing.Color.Yellow;
+            this.btnEditCate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCate.ForeColor = System.Drawing.Color.Black;
-            this.btnEditCate.Location = new System.Drawing.Point(77, 227);
+            this.btnEditCate.Location = new System.Drawing.Point(-2, -2);
             this.btnEditCate.Name = "btnEditCate";
-            this.btnEditCate.Size = new System.Drawing.Size(133, 40);
+            this.btnEditCate.Size = new System.Drawing.Size(137, 44);
             this.btnEditCate.TabIndex = 1;
             this.btnEditCate.Text = "Sửa";
             this.btnEditCate.UseVisualStyleBackColor = false;
@@ -603,9 +623,10 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnDeleteCate
             // 
-            this.btnDeleteCate.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteCate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteCate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCate.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteCate.ForeColor = System.Drawing.Color.White;
             this.btnDeleteCate.Location = new System.Drawing.Point(77, 283);
             this.btnDeleteCate.Name = "btnDeleteCate";
             this.btnDeleteCate.Size = new System.Drawing.Size(133, 40);
@@ -617,8 +638,9 @@ namespace Quan_Ly_Ca_Phe
             // btnAddCate
             // 
             this.btnAddCate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddCate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCate.ForeColor = System.Drawing.Color.Black;
+            this.btnAddCate.ForeColor = System.Drawing.Color.White;
             this.btnAddCate.Location = new System.Drawing.Point(77, 172);
             this.btnAddCate.Name = "btnAddCate";
             this.btnAddCate.Size = new System.Drawing.Size(133, 40);
@@ -716,8 +738,8 @@ namespace Quan_Ly_Ca_Phe
             // 
             // panel18
             // 
+            this.panel18.Controls.Add(this.panel13);
             this.panel18.Controls.Add(this.label18);
-            this.panel18.Controls.Add(this.btnEditTable);
             this.panel18.Controls.Add(this.btnDelTable);
             this.panel18.Controls.Add(this.btnAddTable);
             this.panel18.Controls.Add(this.panel30);
@@ -741,11 +763,12 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnEditTable
             // 
-            this.btnEditTable.BackColor = System.Drawing.Color.Yellow;
+            this.btnEditTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEditTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTable.Location = new System.Drawing.Point(81, 291);
+            this.btnEditTable.Location = new System.Drawing.Point(-2, -2);
             this.btnEditTable.Name = "btnEditTable";
-            this.btnEditTable.Size = new System.Drawing.Size(133, 40);
+            this.btnEditTable.Size = new System.Drawing.Size(137, 44);
             this.btnEditTable.TabIndex = 1;
             this.btnEditTable.Text = "Sửa";
             this.btnEditTable.UseVisualStyleBackColor = false;
@@ -753,8 +776,10 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnDelTable
             // 
-            this.btnDelTable.BackColor = System.Drawing.Color.Red;
+            this.btnDelTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelTable.ForeColor = System.Drawing.Color.White;
             this.btnDelTable.Location = new System.Drawing.Point(81, 337);
             this.btnDelTable.Name = "btnDelTable";
             this.btnDelTable.Size = new System.Drawing.Size(133, 40);
@@ -766,7 +791,9 @@ namespace Quan_Ly_Ca_Phe
             // btnAddTable
             // 
             this.btnAddTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTable.ForeColor = System.Drawing.Color.White;
             this.btnAddTable.Location = new System.Drawing.Point(81, 245);
             this.btnAddTable.Name = "btnAddTable";
             this.btnAddTable.Size = new System.Drawing.Size(133, 40);
@@ -878,11 +905,11 @@ namespace Quan_Ly_Ca_Phe
             // 
             // tpAccount
             // 
+            this.tpAccount.Controls.Add(this.panel14);
             this.tpAccount.Controls.Add(this.panel29);
             this.tpAccount.Controls.Add(this.label19);
             this.tpAccount.Controls.Add(this.panel28);
             this.tpAccount.Controls.Add(this.panel2);
-            this.tpAccount.Controls.Add(this.btnEditAcc);
             this.tpAccount.Controls.Add(this.panel3);
             this.tpAccount.Controls.Add(this.btnAddAcc);
             this.tpAccount.Controls.Add(this.panel4);
@@ -895,66 +922,6 @@ namespace Quan_Ly_Ca_Phe
             this.tpAccount.TabIndex = 4;
             this.tpAccount.Text = "Tài khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label19.Location = new System.Drawing.Point(307, 3);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(163, 20);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Thông tin tài khoản";
-            // 
-            // btnAddAcc
-            // 
-            this.btnAddAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAcc.Location = new System.Drawing.Point(669, 17);
-            this.btnAddAcc.Name = "btnAddAcc";
-            this.btnAddAcc.Size = new System.Drawing.Size(120, 36);
-            this.btnAddAcc.TabIndex = 0;
-            this.btnAddAcc.Text = "Thêm";
-            this.btnAddAcc.UseVisualStyleBackColor = false;
-            this.btnAddAcc.Click += new System.EventHandler(this.btnAddAcc_Click);
-            // 
-            // btnEditAcc
-            // 
-            this.btnEditAcc.BackColor = System.Drawing.Color.Yellow;
-            this.btnEditAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditAcc.Location = new System.Drawing.Point(535, 376);
-            this.btnEditAcc.Name = "btnEditAcc";
-            this.btnEditAcc.Size = new System.Drawing.Size(120, 36);
-            this.btnEditAcc.TabIndex = 1;
-            this.btnEditAcc.Text = "Sửa";
-            this.btnEditAcc.UseVisualStyleBackColor = false;
-            this.btnEditAcc.Click += new System.EventHandler(this.btnEditAcc_Click);
-            // 
-            // btnDelAcc
-            // 
-            this.btnDelAcc.BackColor = System.Drawing.Color.Red;
-            this.btnDelAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelAcc.Location = new System.Drawing.Point(661, 376);
-            this.btnDelAcc.Name = "btnDelAcc";
-            this.btnDelAcc.Size = new System.Drawing.Size(120, 36);
-            this.btnDelAcc.TabIndex = 2;
-            this.btnDelAcc.Text = "Xóa";
-            this.btnDelAcc.UseVisualStyleBackColor = false;
-            this.btnDelAcc.Click += new System.EventHandler(this.btnDelAcc_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReset.Location = new System.Drawing.Point(409, 376);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(120, 36);
-            this.btnReset.TabIndex = 4;
-            this.btnReset.Text = "Đặt lại mật khẩu";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // panel29
             // 
@@ -981,6 +948,17 @@ namespace Quan_Ly_Ca_Phe
             this.label14.Size = new System.Drawing.Size(102, 15);
             this.label14.TabIndex = 0;
             this.label14.Text = "Loại tài khoản:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label19.Location = new System.Drawing.Point(307, 3);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(163, 20);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Thông tin tài khoản";
             // 
             // panel28
             // 
@@ -1035,6 +1013,19 @@ namespace Quan_Ly_Ca_Phe
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập:";
             // 
+            // btnEditAcc
+            // 
+            this.btnEditAcc.BackColor = System.Drawing.Color.Yellow;
+            this.btnEditAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditAcc.Location = new System.Drawing.Point(-2, -2);
+            this.btnEditAcc.Name = "btnEditAcc";
+            this.btnEditAcc.Size = new System.Drawing.Size(126, 42);
+            this.btnEditAcc.TabIndex = 1;
+            this.btnEditAcc.Text = "Sửa";
+            this.btnEditAcc.UseVisualStyleBackColor = false;
+            this.btnEditAcc.Click += new System.EventHandler(this.btnEditAcc_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtIDAcc);
@@ -1063,6 +1054,20 @@ namespace Quan_Ly_Ca_Phe
             this.label2.Text = "ID:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btnAddAcc
+            // 
+            this.btnAddAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAcc.ForeColor = System.Drawing.Color.White;
+            this.btnAddAcc.Location = new System.Drawing.Point(669, 17);
+            this.btnAddAcc.Name = "btnAddAcc";
+            this.btnAddAcc.Size = new System.Drawing.Size(120, 36);
+            this.btnAddAcc.TabIndex = 0;
+            this.btnAddAcc.Text = "Thêm";
+            this.btnAddAcc.UseVisualStyleBackColor = false;
+            this.btnAddAcc.Click += new System.EventHandler(this.btnAddAcc_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.dgvAcc);
@@ -1084,6 +1089,66 @@ namespace Quan_Ly_Ca_Phe
             this.dgvAcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAcc.Size = new System.Drawing.Size(774, 302);
             this.dgvAcc.TabIndex = 0;
+            // 
+            // btnDelAcc
+            // 
+            this.btnDelAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDelAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelAcc.ForeColor = System.Drawing.Color.White;
+            this.btnDelAcc.Location = new System.Drawing.Point(664, 376);
+            this.btnDelAcc.Name = "btnDelAcc";
+            this.btnDelAcc.Size = new System.Drawing.Size(122, 36);
+            this.btnDelAcc.TabIndex = 2;
+            this.btnDelAcc.Text = "Xóa";
+            this.btnDelAcc.UseVisualStyleBackColor = false;
+            this.btnDelAcc.Click += new System.EventHandler(this.btnDelAcc_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReset.Location = new System.Drawing.Point(406, 376);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(122, 36);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Đặt lại mật khẩu";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnEditFood);
+            this.panel1.Location = new System.Drawing.Point(80, 256);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(133, 40);
+            this.panel1.TabIndex = 4;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btnEditCate);
+            this.panel9.Location = new System.Drawing.Point(77, 227);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(133, 40);
+            this.panel9.TabIndex = 5;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnEditTable);
+            this.panel13.Location = new System.Drawing.Point(81, 291);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(133, 40);
+            this.panel13.TabIndex = 6;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btnEditAcc);
+            this.panel14.Location = new System.Drawing.Point(536, 375);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(122, 36);
+            this.panel14.TabIndex = 8;
             // 
             // AdminForm
             // 
@@ -1144,6 +1209,10 @@ namespace Quan_Ly_Ca_Phe
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1237,5 +1306,9 @@ namespace Quan_Ly_Ca_Phe
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
     }
 }

@@ -49,14 +49,15 @@ namespace Quan_Ly_Ca_Phe
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.cbSwitchTable = new System.Windows.Forms.ComboBox();
-            this.btnCheckOut = new CustomButton.VBButton();
-            this.btnAdd = new CustomButton.VBButton();
-            this.btnSwitchTable = new CustomButton.VBButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCheckOut = new CustomButton.VBButton();
+            this.btnAdd = new CustomButton.VBButton();
+            this.btnSwitchTable = new CustomButton.VBButton();
+            this.vbButton1 = new CustomButton.VBButton();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,14 +101,14 @@ namespace Quan_Ly_Ca_Phe
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -163,7 +164,7 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.labelNameTable.AutoSize = true;
             this.labelNameTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameTable.Location = new System.Drawing.Point(3, 8);
+            this.labelNameTable.Location = new System.Drawing.Point(3, 0);
             this.labelNameTable.Name = "labelNameTable";
             this.labelNameTable.Size = new System.Drawing.Size(143, 18);
             this.labelNameTable.TabIndex = 8;
@@ -196,36 +197,40 @@ namespace Quan_Ly_Ca_Phe
             // columnHeader1
             // 
             this.columnHeader1.Text = "Tên món ăn";
-            this.columnHeader1.Width = 111;
+            this.columnHeader1.Width = 117;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 64;
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 84;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 95;
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 93;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.vbButton1);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.btnSwitchTable);
             this.panel4.Controls.Add(this.cbSwitchTable);
             this.panel4.Location = new System.Drawing.Point(384, 362);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(361, 54);
+            this.panel4.Size = new System.Drawing.Size(376, 54);
             this.panel4.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 19);
+            this.label1.Location = new System.Drawing.Point(136, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 11;
@@ -234,71 +239,11 @@ namespace Quan_Ly_Ca_Phe
             // cbSwitchTable
             // 
             this.cbSwitchTable.FormattingEnabled = true;
-            this.cbSwitchTable.Location = new System.Drawing.Point(202, 16);
+            this.cbSwitchTable.Location = new System.Drawing.Point(225, 26);
             this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(75, 21);
+            this.cbSwitchTable.Size = new System.Drawing.Size(42, 21);
             this.cbSwitchTable.TabIndex = 4;
             this.cbSwitchTable.SelectedIndexChanged += new System.EventHandler(this.cbSwitchTable_SelectedIndexChanged);
-            // 
-            // btnCheckOut
-            // 
-            this.btnCheckOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(169)))), ((int)(((byte)(18)))));
-            this.btnCheckOut.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(169)))), ((int)(((byte)(18)))));
-            this.btnCheckOut.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCheckOut.BorderRadius = 5;
-            this.btnCheckOut.BorderSize = 0;
-            this.btnCheckOut.FlatAppearance.BorderSize = 0;
-            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(266, 8);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(93, 26);
-            this.btnCheckOut.TabIndex = 4;
-            this.btnCheckOut.Text = "Thanh toán";
-            this.btnCheckOut.TextColor = System.Drawing.Color.White;
-            this.btnCheckOut.UseVisualStyleBackColor = false;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
-            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
-            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAdd.BorderRadius = 5;
-            this.btnAdd.BorderSize = 0;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(160, 8);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(93, 26);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Thêm món";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAddDish_Click);
-            // 
-            // btnSwitchTable
-            // 
-            this.btnSwitchTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnSwitchTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnSwitchTable.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSwitchTable.BorderRadius = 3;
-            this.btnSwitchTable.BorderSize = 0;
-            this.btnSwitchTable.FlatAppearance.BorderSize = 0;
-            this.btnSwitchTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSwitchTable.ForeColor = System.Drawing.Color.White;
-            this.btnSwitchTable.Location = new System.Drawing.Point(282, 12);
-            this.btnSwitchTable.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSwitchTable.Name = "btnSwitchTable";
-            this.btnSwitchTable.Size = new System.Drawing.Size(93, 26);
-            this.btnSwitchTable.TabIndex = 11;
-            this.btnSwitchTable.Text = "Chuyển ";
-            this.btnSwitchTable.TextColor = System.Drawing.Color.White;
-            this.btnSwitchTable.UseVisualStyleBackColor = false;
-            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // panel5
             // 
@@ -339,6 +284,93 @@ namespace Quan_Ly_Ca_Phe
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(190, 1);
             this.panel9.TabIndex = 2;
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(169)))), ((int)(((byte)(18)))));
+            this.btnCheckOut.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(169)))), ((int)(((byte)(18)))));
+            this.btnCheckOut.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCheckOut.BorderRadius = 5;
+            this.btnCheckOut.BorderSize = 0;
+            this.btnCheckOut.FlatAppearance.BorderSize = 0;
+            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
+            this.btnCheckOut.Location = new System.Drawing.Point(266, 8);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Padding = new System.Windows.Forms.Padding(2);
+            this.btnCheckOut.Size = new System.Drawing.Size(93, 26);
+            this.btnCheckOut.TabIndex = 4;
+            this.btnCheckOut.Text = "Thanh toán";
+            this.btnCheckOut.TextColor = System.Drawing.Color.White;
+            this.btnCheckOut.UseVisualStyleBackColor = false;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
+            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 5;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(160, 8);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Size = new System.Drawing.Size(93, 26);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Thêm món";
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAddDish_Click);
+            // 
+            // btnSwitchTable
+            // 
+            this.btnSwitchTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnSwitchTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnSwitchTable.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSwitchTable.BorderRadius = 3;
+            this.btnSwitchTable.BorderSize = 0;
+            this.btnSwitchTable.FlatAppearance.BorderSize = 0;
+            this.btnSwitchTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSwitchTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSwitchTable.ForeColor = System.Drawing.Color.White;
+            this.btnSwitchTable.Location = new System.Drawing.Point(272, 21);
+            this.btnSwitchTable.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSwitchTable.Name = "btnSwitchTable";
+            this.btnSwitchTable.Padding = new System.Windows.Forms.Padding(2);
+            this.btnSwitchTable.Size = new System.Drawing.Size(89, 26);
+            this.btnSwitchTable.TabIndex = 11;
+            this.btnSwitchTable.Text = "Chuyển";
+            this.btnSwitchTable.TextColor = System.Drawing.Color.White;
+            this.btnSwitchTable.UseVisualStyleBackColor = false;
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
+            // 
+            // vbButton1
+            // 
+            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton1.BorderRadius = 3;
+            this.vbButton1.BorderSize = 0;
+            this.vbButton1.FlatAppearance.BorderSize = 0;
+            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vbButton1.ForeColor = System.Drawing.Color.White;
+            this.vbButton1.Location = new System.Drawing.Point(6, 22);
+            this.vbButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.vbButton1.Name = "vbButton1";
+            this.vbButton1.Padding = new System.Windows.Forms.Padding(2);
+            this.vbButton1.Size = new System.Drawing.Size(89, 26);
+            this.vbButton1.TabIndex = 12;
+            this.vbButton1.Text = "Xóa món";
+            this.vbButton1.TextColor = System.Drawing.Color.White;
+            this.vbButton1.UseVisualStyleBackColor = false;
             // 
             // TableManagerForm
             // 
@@ -405,5 +437,6 @@ namespace Quan_Ly_Ca_Phe
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
+        private CustomButton.VBButton vbButton1;
     }
 }

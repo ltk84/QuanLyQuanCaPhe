@@ -66,6 +66,7 @@ namespace Quan_Ly_Ca_Phe
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(0, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
@@ -96,6 +97,7 @@ namespace Quan_Ly_Ca_Phe
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(0, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
@@ -131,11 +133,12 @@ namespace Quan_Ly_Ca_Phe
             this.btnSignIn.BorderSize = 0;
             this.btnSignIn.FlatAppearance.BorderSize = 0;
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignIn.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(56)))), ((int)(((byte)(28)))));
-            this.btnSignIn.Location = new System.Drawing.Point(318, 176);
+            this.btnSignIn.Location = new System.Drawing.Point(314, 176);
             this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(76, 23);
+            this.btnSignIn.Padding = new System.Windows.Forms.Padding(2);
+            this.btnSignIn.Size = new System.Drawing.Size(80, 25);
             this.btnSignIn.TabIndex = 7;
             this.btnSignIn.Text = "Đăng nhập";
             this.btnSignIn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(56)))), ((int)(((byte)(28)))));
@@ -151,11 +154,12 @@ namespace Quan_Ly_Ca_Phe
             this.btnExit.BorderSize = 0;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Roboto", 9F);
+            this.btnExit.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(56)))), ((int)(((byte)(28)))));
             this.btnExit.Location = new System.Drawing.Point(399, 176);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(76, 23);
+            this.btnExit.Padding = new System.Windows.Forms.Padding(2);
+            this.btnExit.Size = new System.Drawing.Size(80, 25);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Thoát";
             this.btnExit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(56)))), ((int)(((byte)(28)))));
