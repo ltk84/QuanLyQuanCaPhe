@@ -597,5 +597,10 @@ namespace Quan_Ly_Ca_Phe
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -232,5 +232,15 @@ namespace Quan_Ly_Ca_Phe
         {
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void TableManagerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

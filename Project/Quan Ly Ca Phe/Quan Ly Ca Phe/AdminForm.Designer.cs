@@ -97,7 +97,6 @@ namespace Quan_Ly_Ca_Phe
             this.panel25 = new System.Windows.Forms.Panel();
             this.dgvTable = new System.Windows.Forms.DataGridView();
             this.tpAccount = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.btnAddAcc = new System.Windows.Forms.Button();
             this.btnEditAcc = new System.Windows.Forms.Button();
@@ -144,7 +143,6 @@ namespace Quan_Ly_Ca_Phe
             this.panel25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             this.tpAccount.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -392,7 +390,7 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnSearchFood
             // 
-            this.btnSearchFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSearchFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
             this.btnSearchFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchFood.ForeColor = System.Drawing.Color.White;
             this.btnSearchFood.Location = new System.Drawing.Point(194, 3);
@@ -880,8 +878,16 @@ namespace Quan_Ly_Ca_Phe
             // 
             // tpAccount
             // 
-            this.tpAccount.Controls.Add(this.panel1);
+            this.tpAccount.Controls.Add(this.panel29);
+            this.tpAccount.Controls.Add(this.label19);
+            this.tpAccount.Controls.Add(this.panel28);
+            this.tpAccount.Controls.Add(this.panel2);
+            this.tpAccount.Controls.Add(this.btnEditAcc);
+            this.tpAccount.Controls.Add(this.panel3);
+            this.tpAccount.Controls.Add(this.btnAddAcc);
             this.tpAccount.Controls.Add(this.panel4);
+            this.tpAccount.Controls.Add(this.btnDelAcc);
+            this.tpAccount.Controls.Add(this.btnReset);
             this.tpAccount.Location = new System.Drawing.Point(4, 28);
             this.tpAccount.Name = "tpAccount";
             this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
@@ -890,28 +896,12 @@ namespace Quan_Ly_Ca_Phe
             this.tpAccount.Text = "Tài khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.btnAddAcc);
-            this.panel1.Controls.Add(this.btnEditAcc);
-            this.panel1.Controls.Add(this.btnDelAcc);
-            this.panel1.Controls.Add(this.btnReset);
-            this.panel1.Controls.Add(this.panel29);
-            this.panel1.Controls.Add(this.panel28);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(497, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 419);
-            this.panel1.TabIndex = 8;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label19.Location = new System.Drawing.Point(73, 23);
+            this.label19.Location = new System.Drawing.Point(307, 3);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(163, 20);
             this.label19.TabIndex = 6;
@@ -921,9 +911,9 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.btnAddAcc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAddAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAcc.Location = new System.Drawing.Point(3, 277);
+            this.btnAddAcc.Location = new System.Drawing.Point(669, 17);
             this.btnAddAcc.Name = "btnAddAcc";
-            this.btnAddAcc.Size = new System.Drawing.Size(133, 40);
+            this.btnAddAcc.Size = new System.Drawing.Size(120, 36);
             this.btnAddAcc.TabIndex = 0;
             this.btnAddAcc.Text = "Thêm";
             this.btnAddAcc.UseVisualStyleBackColor = false;
@@ -933,9 +923,9 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.btnEditAcc.BackColor = System.Drawing.Color.Yellow;
             this.btnEditAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditAcc.Location = new System.Drawing.Point(151, 277);
+            this.btnEditAcc.Location = new System.Drawing.Point(535, 376);
             this.btnEditAcc.Name = "btnEditAcc";
-            this.btnEditAcc.Size = new System.Drawing.Size(133, 40);
+            this.btnEditAcc.Size = new System.Drawing.Size(120, 36);
             this.btnEditAcc.TabIndex = 1;
             this.btnEditAcc.Text = "Sửa";
             this.btnEditAcc.UseVisualStyleBackColor = false;
@@ -945,9 +935,9 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.btnDelAcc.BackColor = System.Drawing.Color.Red;
             this.btnDelAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelAcc.Location = new System.Drawing.Point(4, 340);
+            this.btnDelAcc.Location = new System.Drawing.Point(661, 376);
             this.btnDelAcc.Name = "btnDelAcc";
-            this.btnDelAcc.Size = new System.Drawing.Size(133, 40);
+            this.btnDelAcc.Size = new System.Drawing.Size(120, 36);
             this.btnDelAcc.TabIndex = 2;
             this.btnDelAcc.Text = "Xóa";
             this.btnDelAcc.UseVisualStyleBackColor = false;
@@ -955,11 +945,12 @@ namespace Quan_Ly_Ca_Phe
             // 
             // btnReset
             // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(93)))), ((int)(((byte)(132)))));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(151, 340);
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReset.Location = new System.Drawing.Point(409, 376);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(133, 40);
+            this.btnReset.Size = new System.Drawing.Size(120, 36);
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Đặt lại mật khẩu";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -969,25 +960,25 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.panel29.Controls.Add(this.txtAccountType);
             this.panel29.Controls.Add(this.label14);
-            this.panel29.Location = new System.Drawing.Point(6, 213);
+            this.panel29.Location = new System.Drawing.Point(513, 16);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(283, 45);
+            this.panel29.Size = new System.Drawing.Size(145, 34);
             this.panel29.TabIndex = 5;
             // 
             // txtAccountType
             // 
-            this.txtAccountType.Location = new System.Drawing.Point(111, 17);
+            this.txtAccountType.Location = new System.Drawing.Point(112, 11);
             this.txtAccountType.Name = "txtAccountType";
-            this.txtAccountType.Size = new System.Drawing.Size(167, 20);
+            this.txtAccountType.Size = new System.Drawing.Size(30, 20);
             this.txtAccountType.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 18);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 15);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 16);
+            this.label14.Size = new System.Drawing.Size(102, 15);
             this.label14.TabIndex = 0;
             this.label14.Text = "Loại tài khoản:";
             // 
@@ -995,26 +986,26 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.panel28.Controls.Add(this.txtPassAcc);
             this.panel28.Controls.Add(this.label13);
-            this.panel28.Location = new System.Drawing.Point(6, 162);
+            this.panel28.Location = new System.Drawing.Point(315, 19);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(283, 45);
+            this.panel28.Size = new System.Drawing.Size(194, 30);
             this.panel28.TabIndex = 4;
             // 
             // txtPassAcc
             // 
-            this.txtPassAcc.Location = new System.Drawing.Point(111, 14);
+            this.txtPassAcc.Location = new System.Drawing.Point(70, 7);
             this.txtPassAcc.Name = "txtPassAcc";
-            this.txtPassAcc.Size = new System.Drawing.Size(167, 20);
+            this.txtPassAcc.Size = new System.Drawing.Size(122, 20);
             this.txtPassAcc.TabIndex = 1;
             this.txtPassAcc.UseSystemPasswordChar = true;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(31, 15);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 11);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.Size = new System.Drawing.Size(70, 15);
             this.label13.TabIndex = 0;
             this.label13.Text = "Mật khẩu:";
             // 
@@ -1022,25 +1013,25 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.panel2.Controls.Add(this.txtUsernameAcc);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 111);
+            this.panel2.Location = new System.Drawing.Point(85, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 45);
+            this.panel2.Size = new System.Drawing.Size(229, 36);
             this.panel2.TabIndex = 3;
             // 
             // txtUsernameAcc
             // 
-            this.txtUsernameAcc.Location = new System.Drawing.Point(117, 14);
+            this.txtUsernameAcc.Location = new System.Drawing.Point(101, 6);
             this.txtUsernameAcc.Name = "txtUsernameAcc";
-            this.txtUsernameAcc.Size = new System.Drawing.Size(167, 20);
+            this.txtUsernameAcc.Size = new System.Drawing.Size(123, 20);
             this.txtUsernameAcc.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-2, 18);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 16);
+            this.label1.Size = new System.Drawing.Size(107, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập:";
             // 
@@ -1048,35 +1039,36 @@ namespace Quan_Ly_Ca_Phe
             // 
             this.panel3.Controls.Add(this.txtIDAcc);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(4, 60);
+            this.panel3.Location = new System.Drawing.Point(3, 23);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(291, 45);
+            this.panel3.Size = new System.Drawing.Size(83, 27);
             this.panel3.TabIndex = 2;
             // 
             // txtIDAcc
             // 
-            this.txtIDAcc.Location = new System.Drawing.Point(113, 14);
+            this.txtIDAcc.Location = new System.Drawing.Point(24, 6);
             this.txtIDAcc.Name = "txtIDAcc";
             this.txtIDAcc.ReadOnly = true;
-            this.txtIDAcc.Size = new System.Drawing.Size(167, 20);
+            this.txtIDAcc.Size = new System.Drawing.Size(49, 20);
             this.txtIDAcc.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 15);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-4, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 16);
+            this.label2.Size = new System.Drawing.Size(25, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.dgvAcc);
-            this.panel4.Location = new System.Drawing.Point(7, 3);
+            this.panel4.Location = new System.Drawing.Point(7, 65);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(484, 416);
+            this.panel4.Size = new System.Drawing.Size(777, 305);
             this.panel4.TabIndex = 7;
             // 
             // dgvAcc
@@ -1086,11 +1078,11 @@ namespace Quan_Ly_Ca_Phe
             this.dgvAcc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAcc.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvAcc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAcc.Location = new System.Drawing.Point(3, 3);
+            this.dgvAcc.Location = new System.Drawing.Point(0, 3);
             this.dgvAcc.Name = "dgvAcc";
             this.dgvAcc.ReadOnly = true;
             this.dgvAcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAcc.Size = new System.Drawing.Size(476, 404);
+            this.dgvAcc.Size = new System.Drawing.Size(774, 302);
             this.dgvAcc.TabIndex = 0;
             // 
             // AdminForm
@@ -1141,8 +1133,7 @@ namespace Quan_Ly_Ca_Phe
             this.panel25.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).EndInit();
             this.tpAccount.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tpAccount.PerformLayout();
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
             this.panel28.ResumeLayout(false);
@@ -1211,7 +1202,6 @@ namespace Quan_Ly_Ca_Phe
         private System.Windows.Forms.Button btnDelTable;
         private System.Windows.Forms.Button btnEditTable;
         private System.Windows.Forms.Button btnAddTable;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Label label14;
