@@ -19,9 +19,9 @@ namespace Quan_Ly_Ca_Phe.DTO
         public int CatergoryID { get => catergoryID; set => catergoryID = value; }
         public float Price { get => price; set => price = value; }
 
-        public Food(int iD, string name, int catergoryID, float price)
+        public Food(int id, string name, int catergoryID, float price)
         {
-            this.ID = iD;
+            this.iD = id;
             this.Name = name;
             this.CatergoryID = catergoryID;
             this.Price = price;

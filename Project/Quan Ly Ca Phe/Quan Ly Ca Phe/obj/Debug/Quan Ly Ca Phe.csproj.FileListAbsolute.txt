@@ -26,3 +26,18 @@ F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly C
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.CheckOut.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.AssemblyReference.cache
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.CheckOut.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.Properties.Resources.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.TableManagerForm.resources
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.GenerateResource.cache
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
+D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb

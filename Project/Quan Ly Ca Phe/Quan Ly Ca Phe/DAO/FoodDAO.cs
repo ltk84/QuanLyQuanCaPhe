@@ -18,7 +18,13 @@ namespace Quan_Ly_Ca_Phe.DAO
             private set { instance = value; }
         }
 
-        private FoodDAO() { }
+        private static List<Food> foodList;
+        public static List<Food> FoodList { get => foodList; set => foodList = value; }
+
+        private FoodDAO()
+        {
+            FoodList = new List<Food>();
+        }
 
         public List<Food> GetFoodListByCateID(int idCate)
         {
@@ -49,13 +55,20 @@ namespace Quan_Ly_Ca_Phe.DAO
             return data;
         }
 
+        public List<Food> Test_GetFoodList()
+        {
+            return FoodList;
+        }
+
         public bool InsertFood(string name, int cate, float price)
         {
-            string query = string.Format( "INSERT INTO dbo.FOOD (FOOD_NAME , FCATE_ID , PRICE) VALUES(N'{0}', {1},  {2})", name, cate, price);
+            string query = string.Format("INSERT INTO dbo.FOOD (FOOD_NAME , FCATE_ID , PRICE) VALUES(N'{0}', {1},  {2})", name, cate, price);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
         }
+
+
 
         public bool EditFood(int idFood, string name, int cate, float price)
         {
@@ -65,14 +78,16 @@ namespace Quan_Ly_Ca_Phe.DAO
             return result > 0;
         }
 
+
+
         public bool DeleteFood(int idFood)
         {
             int result = -1;
             BillInfoDAO.Instance.DeleteBillInfoByFoodID(idFood);
-            
+
             string query = "DELETE FROM dbo.FOOD WHERE FOOD_ID = " + idFood;
             result = DataProvider.Instance.ExecuteNonQuery(query);
-            
+
             return result > 0;
         }
 
@@ -83,6 +98,34 @@ namespace Quan_Ly_Ca_Phe.DAO
 
             return data;
         }
+
+        #region test function
+        public bool Test_InsertFood(int id, string name, int cate, float price)
+        {
+            if (!string.IsNullOrWhiteSpace(name) && cate >= 0 && price >= 0)
+            {
+                DateTime day = new DateTime(2008, 5, 1, 8, 30, 52);
+                Food newFood = new Food(id, name, cate, price);
+                FoodList.Add(newFood);
+                return true;
+            }
+            return false;
+        }
+
+        public bool Test_EditFood(int id, string newName, int newCate, float newPrice)
+        {
+            if (id >= 0 && !string.IsNullOrWhiteSpace(newName) && newCate >= 0 && newPrice >= 0)
+            {
+                Food existFood = FoodList.Where(x => x.ID == id).FirstOrDefault();
+                if (existFood == null) return false;
+                existFood.Name = newName;
+                existFood.CatergoryID = (int)newCate;
+                existFood.Price = (float)newPrice;
+                return true;
+            }
+            return false;
+        }
+        #endregion
 
     }
 }

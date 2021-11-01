@@ -28,7 +28,7 @@ namespace Quan_Ly_Ca_Phe
         {
             string userName = txtSignIn.Text;
             string passWord = txtPassword.Text;
-            if (Login(userName, passWord))
+            if (AccountDAO.Instance.CheckValidateUserNamePassword(userName, passWord) && Login(userName, passWord))
             {
                 Account acc = AccountDAO.Instance.GetAccountByUserName(userName);
                 TableManagerForm tmf = new TableManagerForm(acc);

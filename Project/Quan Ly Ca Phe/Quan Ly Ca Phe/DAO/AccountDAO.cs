@@ -12,14 +12,19 @@ namespace Quan_Ly_Ca_Phe.DAO
     public class AccountDAO
     {
         private static AccountDAO instance;
+        private static Account userAcccount;
+        public static Account UserAccount { get; set; }
 
-        public static AccountDAO Instance 
+        public static AccountDAO Instance
         {
             get { if (instance == null) instance = new AccountDAO(); return instance; }
             private set { instance = value; }
         }
 
-        private AccountDAO() { }
+        private AccountDAO()
+        {
+            UserAccount = new Account("admin", 0, "admin");
+        }
 
         public bool Login(string userName, string passWord)
         {
@@ -34,9 +39,19 @@ namespace Quan_Ly_Ca_Phe.DAO
 
             string query = "EXEC USP_LOGIN @USERNAME , @PASS";
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hassPass});
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hassPass });
 
             return result.Rows.Count > 0;
+        }
+
+        public bool Test_Login(string username, string password)
+        {
+            return username.Equals(UserAccount.UserName) && password.Equals(UserAccount.Password);
+        }
+
+        public bool CheckValidateUserNamePassword(string username, string password)
+        {
+            return !string.IsNullOrWhiteSpace(username) && username.Length <= 20 && !string.IsNullOrWhiteSpace(password) && password.Length <= 20;
         }
 
         public Account GetAccountByUserName(string username)
@@ -94,6 +109,16 @@ namespace Quan_Ly_Ca_Phe.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public bool Test_ChangePassword(string username, string newPassword)
+        {
+            if (CheckValidateUserNamePassword(username, newPassword))
+            {
+                UserAccount.Password = newPassword;
+                return true;
+            }
+            return false;
         }
     }
 }
