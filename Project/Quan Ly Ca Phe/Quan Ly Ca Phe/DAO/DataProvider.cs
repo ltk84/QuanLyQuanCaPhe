@@ -12,7 +12,7 @@ namespace Quan_Ly_Ca_Phe.DAO
     {
         private static DataProvider instance; 
 
-        private string connectSTR = @"Data Source=DESKTOP-GNVB183;Initial Catalog=QLCF;Integrated Security=True";
+        private string connectSTR = @"Data Source=DESKTOP-F3MLMEU\SQLEXPRESS;Initial Catalog=QLCF;Integrated Security=True";
 
         public static DataProvider Instance
         {
