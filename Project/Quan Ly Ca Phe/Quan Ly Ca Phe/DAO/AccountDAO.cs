@@ -12,7 +12,6 @@ namespace Quan_Ly_Ca_Phe.DAO
     public class AccountDAO
     {
         private static AccountDAO instance;
-        private static Account userAcccount;
         public static Account UserAccount { get; set; }
 
         public static AccountDAO Instance
@@ -119,6 +118,21 @@ namespace Quan_Ly_Ca_Phe.DAO
                 return true;
             }
             return false;
+        }
+
+        public string Test_ResetPassword(int id)
+        {
+            List<Account> listAcc = new List<Account>()
+            {
+                new Account(1, "1", "abc", 0),
+                new Account(2, "2", "abc", 0),
+            };
+
+            var acc = listAcc.Where(x => x.ID == id).FirstOrDefault();
+            if (acc == null) return null;
+            acc.Password = "1";
+
+            return acc.Password;
         }
     }
 }

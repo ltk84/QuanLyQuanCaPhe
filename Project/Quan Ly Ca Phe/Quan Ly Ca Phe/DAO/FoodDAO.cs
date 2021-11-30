@@ -69,7 +69,6 @@ namespace Quan_Ly_Ca_Phe.DAO
         }
 
 
-
         public bool EditFood(int idFood, string name, int cate, float price)
         {
             string query = string.Format("UPDATE dbo.FOOD	SET FOOD_NAME = N'{0}', FCATE_ID = {1}, PRICE = {2} WHERE FOOD_ID = {3}", name, cate, price, idFood);
@@ -124,6 +123,36 @@ namespace Quan_Ly_Ca_Phe.DAO
                 return true;
             }
             return false;
+        }
+
+        public bool Test_DeleteFood(int id)
+        {
+            FoodList.Clear();
+            FoodList.Add(new Food(1, "Gà rán", 1, 30000));
+            FoodList.Add(new Food(2, "Cà phê", 2, 10000));
+
+            if (id >= 0)
+            {
+                Food choosenFood = FoodList.Where(x => x.ID == id).FirstOrDefault();
+                if (choosenFood == null) return false;
+                FoodList.Remove(choosenFood);
+                return true;
+            }
+            return false;
+        }
+
+        public List<Food> Test_SearchFood(string keyword)
+        {
+            List<Food> list = new List<Food>()
+            {
+                new Food(1, "Gà rán", 1, 30000),
+                new Food(2, "Gà luộc", 2, 10000)
+            };
+
+            FoodList.Clear();
+            FoodList.AddRange(list);
+            if (keyword == null) return new List<Food>();
+            return FoodDAO.FoodList.Where(x => x.Name.Contains(keyword)).ToList();
         }
         #endregion
 

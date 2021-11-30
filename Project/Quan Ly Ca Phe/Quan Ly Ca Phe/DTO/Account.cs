@@ -9,6 +9,7 @@ namespace Quan_Ly_Ca_Phe.DTO
 {
     public class Account
     {
+        private int id;
         private string userName;
         private string password;
         private int type;
@@ -20,6 +21,15 @@ namespace Quan_Ly_Ca_Phe.DTO
             this.Type = type;
         }
 
+        public Account(int id, string username, string password, int type)
+        {
+            this.id = id;
+            this.userName = username;
+            this.password = password;
+            this.type = type;
+        }
+
+        public int ID { get => id; set => id = value; }
         public string UserName { get => userName; set => userName = value; }
         public string Password { get => password; set => password = value; }
         public int Type { get => type; set => type = value; }

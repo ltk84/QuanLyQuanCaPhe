@@ -48,5 +48,37 @@ namespace QuanLyCaPheTest
 
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        [TestCase(1, true)]
+        [TestCase(-1, false)]
+        public void Test_DeleteFood(int id, bool expectedResult)
+        {
+            bool result = FoodDAO.Instance.Test_DeleteFood(id);
+
+            Assert.AreEqual(expectedResult, result);
+        }
+
+
+        [Test]
+        [TestCase("Gà", true)]
+        [TestCase(null, false)]
+        public void Test_SearchFood(string keyword, bool expectedResult)
+        {
+
+            var findingList = FoodDAO.Instance.Test_SearchFood(keyword);
+
+            bool result;
+            if (findingList.Count == 2)
+            {
+                result = true;
+            }
+            else result = false;
+
+            Assert.AreEqual(expectedResult, result);
+
+        }
+
+
     }
 }
