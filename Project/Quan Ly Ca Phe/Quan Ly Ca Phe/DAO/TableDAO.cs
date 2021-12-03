@@ -108,5 +108,17 @@ namespace Quan_Ly_Ca_Phe.DAO
             }
             return false;
         }
+        public bool Test_DeleteTable(int id)
+        {
+
+            if (id >= 0)
+            {
+                Table choosenTable = TableList.Where(x => x.ID == id).FirstOrDefault();
+                if (choosenTable == null) return false;
+                TableList.Remove(choosenTable);
+                return true;
+            }
+            return false;
+        }
     }
 }

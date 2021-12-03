@@ -45,5 +45,18 @@ namespace QuanLyCaPheTest
 
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        [TestCase(1, true)]
+        [TestCase(-1, false)]
+        public void Test_DeleteTable(int id, bool expectedResult)
+        {
+            TableDAO.TableList.Clear();
+            TableDAO.TableList.Add(new Table(1, 0, "Bàn 1"));
+            TableDAO.TableList.Add(new Table(2, 1, "Bàn 2"));
+            bool result = TableDAO.Instance.Test_DeleteTable(id);
+
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }
