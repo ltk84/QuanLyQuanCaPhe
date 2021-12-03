@@ -13,8 +13,13 @@ namespace Quan_Ly_Ca_Phe.DAO
         private static TableDAO instance;
 
         public static TableDAO Instance { get { if (instance == null) instance = new TableDAO(); return instance; } private set => instance = value; }
+        private static List<Table> tableList;
+        public static List<Table> TableList { get => tableList; set => tableList = value; }
 
-        private TableDAO() { }
+
+        private TableDAO() {
+            TableList = new List<Table>();
+        }
 
         public static int Height = 80;
         public static int Weight = 80;
@@ -77,6 +82,31 @@ namespace Quan_Ly_Ca_Phe.DAO
             int res = DataProvider.Instance.ExecuteNonQuery(query);
 
             return res > 0;
+        }
+
+        public bool Test_InsertTable(int id, int state, string name)
+        {
+            if (!string.IsNullOrWhiteSpace(name) && (state == 0 || state == 1))
+            {
+                Table newTable = new Table(id,state,name);
+                TableList.Add(newTable);
+                return true;
+            }
+            return false;
+        }
+        public bool Test_EditTable(int state, string name, int? id)
+        {
+            if (id == null)
+                return false;
+            if (id >= 0 && !string.IsNullOrWhiteSpace(name) && (state == 0 || state == 1))
+            {
+                Table existTable = TableList.Where(x => x.ID == id).FirstOrDefault();
+                if (existTable == null) return false;
+                existTable.Name = name;
+                existTable.Status = state;
+                return true;
+            }
+            return false;
         }
     }
 }
