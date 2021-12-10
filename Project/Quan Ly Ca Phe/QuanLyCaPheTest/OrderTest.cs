@@ -27,7 +27,7 @@ namespace QuanLyCaPheTest
         [TestCase(1, 2, 0, false)]
         public void Test_AddOrder(int idTable, int idFood, int count, bool expectedResult)
         {
-            bool result = BillInfoDAO.Instance.Test_AddOrder(idTable,idFood,count,expectedResult);
+            bool result = BillInfoDAO.Instance.Test_AddOrder(idTable,idFood,count);
             Assert.AreEqual(expectedResult, result);
         }
     }
