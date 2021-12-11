@@ -56,3 +56,18 @@ D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code
 D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
 D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
 D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.AssemblyReference.cache
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.CheckOut.resources
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.Properties.Resources.resources
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.TableManagerForm.resources
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.GenerateResource.cache
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
+E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
