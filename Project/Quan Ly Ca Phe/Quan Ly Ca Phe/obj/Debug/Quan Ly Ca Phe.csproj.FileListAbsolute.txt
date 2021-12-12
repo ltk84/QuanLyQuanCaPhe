@@ -14,7 +14,6 @@ D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csprojAssemblyReference.cache
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
 F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
@@ -56,3 +55,4 @@ D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code
 D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
 D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
 D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
+F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.AssemblyReference.cache
