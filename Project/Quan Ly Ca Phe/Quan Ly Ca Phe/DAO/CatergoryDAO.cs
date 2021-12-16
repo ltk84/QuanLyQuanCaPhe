@@ -11,6 +11,8 @@ namespace Quan_Ly_Ca_Phe.DAO
     public class CatergoryDAO
     {
         private static CatergoryDAO instance;
+        private static List<Catergory> catergoryList;
+        public static List<Catergory> CatergoryList { get => catergoryList; set => catergoryList = value; }
 
         public static CatergoryDAO Instance
         {
@@ -18,7 +20,7 @@ namespace Quan_Ly_Ca_Phe.DAO
             private set { instance = value; }
         }
 
-        private CatergoryDAO() { }
+        private CatergoryDAO() { CatergoryList = new List<Catergory>();}
 
         public List<Catergory> LoadCatergory()
         {
@@ -94,6 +96,43 @@ namespace Quan_Ly_Ca_Phe.DAO
             int res = DataProvider.Instance.ExecuteNonQuery(query);
 
             return res > 0;
+        }
+
+        /*----------------------------------------------*/
+        public bool Test_InsertCatergory(int id, string name)
+        {
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                Catergory newCate = new Catergory(name, id);
+                CatergoryList.Add(newCate);
+                return true;
+            }
+            return false;
+        }
+        public bool Test_EditCategory(int? id, string name)
+        {
+            if (id == null)
+                return false;
+            if (id >= 0 && !string.IsNullOrWhiteSpace(name))
+            {
+                Catergory existCatergory = CatergoryList.Where(x => x.IdCate == id).FirstOrDefault();
+                if (existCatergory == null) return false;
+                existCatergory.NameFood = name;
+                return true;
+            }
+            return false;
+        }
+        public bool Test_DeleteCatergory(int id)
+        {
+
+            if (id >= 0)
+            {
+                Catergory choosenCate = CatergoryList.Where(x => x.IdCate == id).FirstOrDefault();
+                if (choosenCate == null) return false;
+                CatergoryList.Remove(choosenCate);
+                return true;
+            }
+            return false;
         }
     }
 }
