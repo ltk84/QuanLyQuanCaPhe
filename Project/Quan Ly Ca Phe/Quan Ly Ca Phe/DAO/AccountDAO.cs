@@ -20,9 +20,13 @@ namespace Quan_Ly_Ca_Phe.DAO
             private set { instance = value; }
         }
 
+        private  List<Account> accountList;
+        public  List<Account> AccountList { get => accountList; set => accountList = value; }
+
         private AccountDAO()
         {
             UserAccount = new Account("admin", 0, "admin");
+            AccountList = new List<Account>();
         }
 
         public bool Login(string userName, string passWord)
@@ -110,6 +114,17 @@ namespace Quan_Ly_Ca_Phe.DAO
             return result > 0;
         }
 
+        public void resetListAccount()
+        {
+            AccountList = new List<Account>();
+        }
+
+        public void AddToAccountList(Account temp)
+        {
+            AccountList.Add(temp);
+        }
+
+
         public bool Test_ChangePassword(string username, string newPassword)
         {
             if (CheckValidateUserNamePassword(username, newPassword))
@@ -132,7 +147,42 @@ namespace Quan_Ly_Ca_Phe.DAO
             if (acc == null) return null;
             acc.Password = "1";
 
-            return acc.Password;
+            return acc.Password; 
+        }
+        public bool Test_InsertAccount(string userName, string password, int? type)
+        {
+            
+            if (type == null || userName == null || password == null) return false;
+            if (CheckValidateUserNamePassword(userName, password) && (type == 0 || type == 1 || type == 2) )
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool Test_EditAccount(string userName, int? type)
+        {
+            
+            if (userName == null || type == null)
+                return false;
+            if (!string.IsNullOrWhiteSpace(userName) && userName.Length <= 20 && (type == 0 || type == 1 || type == 2))
+            {
+                Account existAccount = AccountList.Where(x => x.UserName == userName).FirstOrDefault();
+                if (existAccount == null) return false;
+                return true;
+            }
+            return false;
+        }
+        public bool Test_DeleteAccount(string username)
+        {
+
+            if (!string.IsNullOrWhiteSpace(username) && username.Length <= 20)
+            {
+                Account choosenAccount = AccountList.Where(x => x.UserName == username).FirstOrDefault();
+                if (choosenAccount == null) return false;
+                AccountList.Remove(choosenAccount);
+                return true;
+            }
+            return false;
         }
     }
 }
