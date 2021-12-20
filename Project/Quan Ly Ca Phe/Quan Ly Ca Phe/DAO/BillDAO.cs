@@ -11,15 +11,22 @@ namespace Quan_Ly_Ca_Phe.DAO
     public class BillDAO
     {
         private static BillDAO instance;
-
+        private static List<Bill> listBill;
+        private static List<float> totalPrices;
         public static BillDAO Instance
         {
             get { if (instance == null) instance = new BillDAO(); return instance; }
             private set { instance = value; }
         }
 
-        private BillDAO() { }
+        private BillDAO() {
+            listBill = new List<Bill>();
+            listBill.Add(new Quan_Ly_Ca_Phe.DTO.Bill(1,1,1,DateTime.Now,DateTime.Now,0));
+            totalPrices = new List<float>();
+            totalPrices.Add(1000);
+        }
 
+       
         public void InsertBill(int idTable)
         {
             string query = "EXEC dbo.USP_InsertBill @id_table = " + idTable;
@@ -53,6 +60,19 @@ namespace Quan_Ly_Ca_Phe.DAO
             string query = "UPDATE dbo.BILL SET BILL_STATUS = 1, DATECHECKOUT = GETDATE(), discount = "+ discount + ", totalPrice = " + totalPrice + "WHERE BILL_ID = " + idBill;
 
             DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public bool Test_CheckOut(int? idBill, int discount)
+        {
+            if (idBill == null) return false;
+            for(int i = 0;i< listBill.Count; i++)
+            {
+                if (idBill == listBill[i].Id)
+                {
+                    listBill.Add(new Quan_Ly_Ca_Phe.DTO.Bill(1, 1, 1, DateTime.Now, DateTime.Now, 0));
+                    return true;
+                }
+            }
+            return false;
         }
 
         public DataTable GetBillListByDate(DateTime DateIn, DateTime DateOut)
