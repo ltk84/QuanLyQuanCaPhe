@@ -34,5 +34,11 @@ namespace Quan_Ly_Ca_Phe.DTO
             this.CatergoryID = (int)row["fcate_ID"];
             this.Price = (float)Convert.ToDouble(row["price"].ToString());
         }
+
+        public override bool Equals(object obj)
+        {
+            var food = obj as Food;
+            return food.ID == this.ID && food.name == this.name && food.catergoryID == this.catergoryID && food.Price == this.price;
+        }
     }
 }

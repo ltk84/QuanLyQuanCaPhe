@@ -55,5 +55,19 @@ namespace QuanLyCaPheTest
 
             Assert.AreEqual(expectResult, result);
         }
+
+        [Test]
+        [TestCase(1, true)]
+        [TestCase(-1, false)]
+        public void Test_ResetPassword(int id, bool expectedResult)
+        {
+            var newPass = AccountDAO.Instance.Test_ResetPassword(id);
+
+            bool result;
+            if (newPass == null || newPass != "1") result = false;
+            else result = true;
+
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }
