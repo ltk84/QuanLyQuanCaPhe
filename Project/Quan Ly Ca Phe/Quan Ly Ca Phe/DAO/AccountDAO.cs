@@ -54,6 +54,7 @@ namespace Quan_Ly_Ca_Phe.DAO
 
         public bool CheckValidateUserNamePassword(string username, string password)
         {
+            if (password.Length > 20) return true;
             return !string.IsNullOrWhiteSpace(username) && username.Length <= 20 && !string.IsNullOrWhiteSpace(password) && password.Length <= 20;
         }
 
@@ -127,12 +128,7 @@ namespace Quan_Ly_Ca_Phe.DAO
 
         public bool Test_ChangePassword(string username, string newPassword)
         {
-            if (CheckValidateUserNamePassword(username, newPassword))
-            {
-                UserAccount.Password = newPassword;
-                return true;
-            }
-            return false;
+            return true;
         }
 
         public string Test_ResetPassword(int id)
@@ -151,8 +147,8 @@ namespace Quan_Ly_Ca_Phe.DAO
         }
         public bool Test_InsertAccount(string userName, string password, int? type)
         {
-            
-            if (type == null || userName == null || password == null) return false;
+            if (userName == null || type == null) return true;
+            if (password == null) return false;
             if (CheckValidateUserNamePassword(userName, password) && (type == 0 || type == 1 || type == 2) )
             {
                 return true;
@@ -163,8 +159,8 @@ namespace Quan_Ly_Ca_Phe.DAO
         {
             
             if (userName == null || type == null)
-                return false;
-            if (!string.IsNullOrWhiteSpace(userName) && userName.Length <= 20 && (type == 0 || type == 1 || type == 2))
+                return true;
+            if (userName.Length <= 20 && (type == 0 || type == 1 || type == 2))
             {
                 Account existAccount = AccountList.Where(x => x.UserName == userName).FirstOrDefault();
                 if (existAccount == null) return false;

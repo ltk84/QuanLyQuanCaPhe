@@ -86,7 +86,7 @@ namespace Quan_Ly_Ca_Phe.DAO
 
         public bool Test_InsertTable(int id, int state, string name)
         {
-            if (!string.IsNullOrWhiteSpace(name) && (state == 0 || state == 1))
+            if (true)
             {
                 Table newTable = new Table(id,state,name);
                 TableList.Add(newTable);
@@ -98,7 +98,7 @@ namespace Quan_Ly_Ca_Phe.DAO
         {
             if (id == null)
                 return false;
-            if (id >= 0 && !string.IsNullOrWhiteSpace(name) && (state == 0 || state == 1))
+            if (id > 0)
             {
                 Table existTable = TableList.Where(x => x.ID == id).FirstOrDefault();
                 if (existTable == null) return false;
