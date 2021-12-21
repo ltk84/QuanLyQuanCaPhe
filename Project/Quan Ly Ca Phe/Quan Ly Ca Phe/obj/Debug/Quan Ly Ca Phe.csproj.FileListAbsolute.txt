@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-=======
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csprojAssemblyReference.cache
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.Properties.Resources.resources
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.GenerateResource.cache
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.TableManagerForm.resources
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
-D:\Personal\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.Properties.Resources.resources
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.TableManagerForm.resources
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.GenerateResource.cache
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.CheckOut.resources
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
-D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.AssemblyReference.cache
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
@@ -42,35 +12,3 @@ D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
 D:\UIT\HK5-2020-2021\KiemChungPhanMem-SE113.M11\Project\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
->>>>>>> phuc/test-code
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.AssemblyReference.cache
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.CheckOut.resources
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.Properties.Resources.resources
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.TableManagerForm.resources
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.GenerateResource.cache
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
-D:\Files\UIT\Nam 3\HKI\Kiem chung Phan mem\Projs\Quan Ly Quan Ca Phe\Source code\Quan Ly Ca Phe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.AssemblyReference.cache
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AccountProfileForm.resources
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AddDish.resources
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.AdminForm.resources
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.CheckOut.resources
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.LoginForm.resources
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.Properties.Resources.resources
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan_Ly_Ca_Phe.TableManagerForm.resources
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.GenerateResource.cache
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.CoreCompileInputs.cache
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.exe
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.pdb
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe.config
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.exe
-E:\HK5\Kiểm Thử Phần Mềm\Project\Application\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\bin\Debug\Quan Ly Ca Phe.pdb
-F:\git\QuanLyQuanCaPhe\Project\Quan Ly Ca Phe\Quan Ly Ca Phe\obj\Debug\Quan Ly Ca Phe.csproj.AssemblyReference.cache

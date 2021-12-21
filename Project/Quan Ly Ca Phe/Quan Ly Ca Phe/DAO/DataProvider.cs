@@ -10,9 +10,9 @@ namespace Quan_Ly_Ca_Phe.DAO
 {
     public class DataProvider
     {
-        private static DataProvider instance; 
+        private static DataProvider instance;
 
-        private string connectSTR = @"Data Source=DESKTOP-F3MLMEU\SQLEXPRESS;Initial Catalog=QLCF;Integrated Security=True";
+        private string connectSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLCF;Integrated Security=True";
 
         public static DataProvider Instance
         {
