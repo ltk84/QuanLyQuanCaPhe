@@ -29,9 +29,9 @@ namespace QuanLyCaPheTest
 
         [Test]
         [TestCase(1, null, false)]
-        [TestCase(null, "Đồ ăn", false)]
         [TestCase(1, "Đồ ăn", true)]
-        public void Test_EditTable(int id, string name, bool expectedResult)
+        [TestCase(null, "Đồ ăn", false)]
+        public void Test_EditCategory(int id, string name, bool expectedResult)
         {
             CatergoryDAO.CatergoryList.Add(new Catergory("Đồ ăn", 1));
             CatergoryDAO.CatergoryList.Add(new Catergory("Đồ uống", 2));
@@ -49,7 +49,7 @@ namespace QuanLyCaPheTest
         {
             CatergoryDAO.CatergoryList.Clear();
             CatergoryDAO.CatergoryList.Add(new Catergory("Đồ ăn", 1));
-            CatergoryDAO.CatergoryList.Add(new Catergory("Đồ uống", 1));
+            CatergoryDAO.CatergoryList.Add(new Catergory("Đồ uống", 2));
             bool result = CatergoryDAO.Instance.Test_DeleteCatergory(id);
 
             Assert.AreEqual(expectedResult, result);

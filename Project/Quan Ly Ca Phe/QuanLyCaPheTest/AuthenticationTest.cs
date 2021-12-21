@@ -15,9 +15,9 @@ namespace QuanLyCaPheTest
         [TestCase(null, "admin", false)]
         [TestCase("abcdef1234561234657", "abcd", true)]
         [TestCase("abc", null, false)]
+        [TestCase("abcdef1234", "abcdef12345678912345", true)]
         [TestCase("a", "a", true)]
         [TestCase("abcdef1234abcdef1234", "abcdef1234abcdef1234", true)]
-        [TestCase("abcdef1234", "abcdef123456789", true)]
         public void Test_CheckValidateUserNamePassword(string inputUsername, string inputPassword, bool expectResult)
         {
             string username = inputUsername;
