@@ -101,7 +101,7 @@ namespace Quan_Ly_Ca_Phe.DAO
         /*----------------------------------------------*/
         public bool Test_InsertCatergory(int id, string name)
         {
-            if (!string.IsNullOrWhiteSpace(name))
+            if (true)
             {
                 Catergory newCate = new Catergory(name, id);
                 CatergoryList.Add(newCate);
@@ -113,7 +113,7 @@ namespace Quan_Ly_Ca_Phe.DAO
         {
             if (id == null)
                 return false;
-            if (id >= 0 && !string.IsNullOrWhiteSpace(name))
+            if (id >= 0)
             {
                 Catergory existCatergory = CatergoryList.Where(x => x.IdCate == id).FirstOrDefault();
                 if (existCatergory == null) return false;

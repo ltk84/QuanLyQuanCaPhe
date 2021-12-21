@@ -101,7 +101,8 @@ namespace Quan_Ly_Ca_Phe.DAO
         #region test function
         public bool Test_InsertFood(int id, string name, int cate, float price)
         {
-            if (!string.IsNullOrWhiteSpace(name) && cate >= 0 && price >= 0)
+            
+            if (cate >= 0)
             {
                 DateTime day = new DateTime(2008, 5, 1, 8, 30, 52);
                 Food newFood = new Food(id, name, cate, price);
@@ -113,7 +114,11 @@ namespace Quan_Ly_Ca_Phe.DAO
 
         public bool Test_EditFood(int id, string newName, int newCate, float newPrice)
         {
-            if (id >= 0 && !string.IsNullOrWhiteSpace(newName) && newCate >= 0 && newPrice >= 0)
+            if(newCate == null)
+            {
+                return false;
+            }
+            if (id >= 0 && newCate >= 0)
             {
                 Food existFood = FoodList.Where(x => x.ID == id).FirstOrDefault();
                 if (existFood == null) return false;
